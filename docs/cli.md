@@ -1,3 +1,5 @@
+
+```
 nest generate app bdcars-api-gateway
 nest generate app deals
 nest generate app news
@@ -21,3 +23,4 @@ nest generate library contracts
 rm -rf libs/contracts/src/*
 mkdir libs/contracts/src/news
 cp apps/news/src/news/dto/* libs/contracts/src/news
+```
