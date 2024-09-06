@@ -1,0 +1,1 @@
+export const NEWS_CLIENT = Symbol('NEWS_CLIENT');
