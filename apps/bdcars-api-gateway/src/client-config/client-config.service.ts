@@ -16,7 +16,9 @@ export class ClientConfigService {
   get dealsClientOptions(): ClientOptions {
     return {
       transport: Transport.TCP,
-      options: { port: this.getDealsClientPort() },
+      options: {
+    
+        port: this.getDealsClientPort() },
     };
   }
 
