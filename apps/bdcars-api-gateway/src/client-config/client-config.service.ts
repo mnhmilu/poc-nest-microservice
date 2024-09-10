@@ -17,7 +17,7 @@ export class ClientConfigService {
     return {
       transport: Transport.TCP,
       options: {
-    
+        host:'deals',
         port: this.getDealsClientPort() },
     };
   }
@@ -25,7 +25,9 @@ export class ClientConfigService {
   get newsClientOptions(): ClientOptions {
     return {
       transport: Transport.TCP,
-      options: { port: this.getNewsClientPort() },
+      options: { 
+        host:'news',
+        port: this.getNewsClientPort() },
     };
   }
 

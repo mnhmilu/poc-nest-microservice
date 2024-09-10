@@ -2,7 +2,7 @@ import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { NewsService } from './news.service';
 
-import { NEWS_PATTERNS } from '../../../../libs/contracts/src/news/news.patterns';
+import { NEWS_PATTERNS } from '@app/contracts/news/news.patterns';
 import { CreateNewsDto } from '@app/contracts/news/create-news.dto';
 import { UpdateNewsDto } from '@app/contracts/news/update-news.dto';
 

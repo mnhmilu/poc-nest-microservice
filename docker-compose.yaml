@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  bdcars-api-gateway:
+    build:
+      context: ./apps/bdcars-api-gateway
+      additional_contexts:
+          - configs=./configs
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - deals
+      - news
+
+  deals:
+    build:
+      context: ./apps/deals
+      additional_contexts:
+          - configs=./configs
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+
+  news:
+    build:
+      context: ./apps/news
+      additional_contexts:
+          - configs=./configs
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"

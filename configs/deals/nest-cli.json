@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/news/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/deals/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/bdcars-api-gateway",
+  "projects": {
+    "bdcars-api-gateway": {
+      "type": "application",
+      "root": "apps/bdcars-api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/bdcars-api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bdcars-api-gateway/tsconfig.app.json"
+      }
+    },
+    "deals": {
+      "type": "application",
+      "root": "apps/deals",
+      "entryFile": "main",
+      "sourceRoot": "apps/deals/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/deals/tsconfig.app.json"
+      }
+    },
+    "news": {
+      "type": "application",
+      "root": "apps/news",
+      "entryFile": "main",
+      "sourceRoot": "apps/news/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/news/tsconfig.app.json"
+      }
+    },
+    "contracts": {
+      "type": "library",
+      "root": "libs/contracts",
+      "entryFile": "index",
+      "sourceRoot": "libs/contracts/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/contracts/tsconfig.lib.json"
+      }
+    }
+  }
+}

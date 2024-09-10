@@ -4,14 +4,14 @@ FROM node:21-alpine
 # Set the working directory to /usr/src/app
 WORKDIR /usr/src/app
 
-COPY --from=configs ./deals/package* /usr/src/app/
-#COPY --from=configs ./dd/* /usr/src/app/
+COPY --from=configs ./package* /usr/src/app/
+COPY --from=configs ./dd/* /usr/src/app/
 
 # Install dependencies
 RUN npm install && npm cache clean --force
 
-COPY --from=configs ./deals/tsconfig.json /usr/src/app/
-COPY --from=configs ./deals/tsconfig.app.json /usr/src/app/
+COPY --from=configs ./tsconfig.json /usr/src/app/
+COPY --from=configs ./tsconfig.app.json /usr/src/app/
 
 #COPY --from=configs ./dd/* /usr/src/app/
 
