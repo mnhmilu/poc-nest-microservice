@@ -80,6 +80,7 @@ use 0.0.0.0 for host to avoid 'Connenction Refused' issue or failed to tcp commu
 
 
 if you think this post help you then 
+![bmc_qr](https://github.com/user-attachments/assets/70a1c34b-9d32-4762-bd3d-247726b67c5f)
 
 
 
