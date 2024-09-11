@@ -25,4 +25,4 @@ RUN  ls
 EXPOSE 3002
 
 # Define the command to run when the container starts
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "start:dev"] 
