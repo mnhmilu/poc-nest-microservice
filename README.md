@@ -47,4 +47,4 @@ API: http://localhost:3000/deals
     
 4) To Construct the project refer to ***cli.md*** file in doc folder for details instruction
 
-5) For dockerization please check the branch for details 
+## For dockerization please check the branch for details 
