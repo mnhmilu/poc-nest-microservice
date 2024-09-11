@@ -77,3 +77,10 @@ use 0.0.0.0 for host to avoid 'Connenction Refused' issue or failed to tcp commu
 3) For best practice create a shared folder and generate library module within it. 
 
 4) Check for ufw port permission if any commnunication failure. 
+
+
+if you think this post help you then 
+
+
+
+buymeacoffee.com/mnhmilu
