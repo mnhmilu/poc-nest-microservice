@@ -5,16 +5,16 @@ FROM node:21-alpine
 WORKDIR /usr/src/app
 
 COPY --from=configs ./package* /usr/src/app/
-COPY --from=configs ./dd/* /usr/src/app/
+
+RUN mkdir -p libs/contracts/src
+
+COPY --from=libs ./contracts/* /usr/src/app/libs/contracts/src/
 
 # Install dependencies
 RUN npm install && npm cache clean --force
 
 COPY --from=configs ./tsconfig.json /usr/src/app/
 COPY --from=configs ./tsconfig.app.json /usr/src/app/
-
-#COPY --from=configs ./dd/* /usr/src/app/
-
 
 # Copy the rest of the application code to the working directory
 COPY . .
